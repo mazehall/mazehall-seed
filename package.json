@@ -1,0 +1,26 @@
+{
+  "name": "mazehall-seed",
+  "version": "0.1.0",
+  "description": "example mazehall project",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/.bin/forever --killSignal=SIGTERM --a  --watch --minUptime 500 --spinSleepTime 1000 ./app.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "mazehall",
+    "nodejs",
+    "express",
+    "angular",
+    "mongodb"
+  ],
+  "author": "Jens Klose",
+  "license": "MIT",
+  "dependencies": {
+    "forever": "^0.11.1",
+    "mazehall": "^0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  }
+}

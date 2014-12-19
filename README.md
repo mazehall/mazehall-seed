@@ -6,7 +6,7 @@ An example application for the mazehall package. Demonstrates the module develop
 
 * Keep it local with npm
 * Use the speed of gulp
-* Bower is your Frontend friend
+* Bower is your frontend friend
 * Keep an eye on server startup time
 * Docker it with environment vars
 
@@ -24,17 +24,17 @@ Npm settings from package.json are using `forever` to manage this jobs.
 ```
     npm start
 ```
-    * start the server as daemon with logging in ~/.forever/*.log
+* start the server as daemon with logging in ~/.forever/*.log
     
 ```
     npm run server
 ```
-    * start server script with blocking shell but console output
+* start server script with blocking shell but console output
     
 ```
     npm stop
 ```
-    * stop the script
+* stop the script
     
 ## Update non development environment
 

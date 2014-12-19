@@ -8,3 +8,5 @@ node_modules
 /.codio
 /tmp
 /.settings
+/secrets
+.zedstate

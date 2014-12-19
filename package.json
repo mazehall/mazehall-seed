@@ -2,9 +2,16 @@
   "name": "mazehall-seed",
   "version": "0.1.0",
   "description": "example mazehall project",
-  "main": "app.js",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mazehall/mazehall-seed.git"
+  },
   "scripts": {
-    "start": "./node_modules/.bin/forever --killSignal=SIGTERM --a  --watch --minUptime 500 --spinSleepTime 1000 ./app.js",
+    "start": "./node_modules/.bin/forever start --killSignal=SIGTERM --a  --watch --minUptime 500 --spinSleepTime 1000 ./server.js",
+    "stop": "./node_modules/.bin/forever stop server.js",
+    "server": "./node_modules/.bin/forever --killSignal=SIGTERM --a  --watch --minUptime 500 --spinSleepTime 1000 ./server.js",
+    "build": "./node_modules/.bin/gulp build",
     "test": "mocha"
   },
   "keywords": [
@@ -17,10 +24,38 @@
   "author": "Jens Klose",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.9.2",
+    "coffee-script": "^1.8.0",
+    "config": "^1.6.0",
+    "express": "^4.10.1",
+    "express-validator": "^2.6.0",
     "forever": "^0.11.1",
-    "mazehall": "^0.1.0"
+    "gulp": "^3.8.10",
+    "gulp-bower": "0.0.7",
+    "gulp-clean": "^0.3.1",
+    "gulp-coffee": "^2.2.0",
+    "gulp-concat": "^2.4.2",
+    "gulp-gulp": "0.0.2",
+    "gulp-less": "^2.0.1",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-minify-html": "^0.1.7",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.2",
+    "gulp-usemin": "^0.3.8",
+    "mazehall": "latest",
+    "mongojs": "^0.15.1",
+    "morgan": "^1.5.0",
+    "run-sequence": "^1.0.2",
+    "sendhal": "^1.1.1",
+    "serve-static": "^1.7.1",
+    "validator": "^3.22.1",
+    "winston": "^0.8.3"
   },
   "devDependencies": {
-    "mocha": "^1.21.4"
+    "gulp-watch": "^1.1.0",
+    "mocha": "^1.21.4",
+    "rewire": "~1",
+    "should": "^4.2.1",
+    "sinon": "^1.12.1"
   }
 }

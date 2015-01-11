@@ -7,10 +7,10 @@ module.exports = {
     File: {
       level: 'silly',
       json: false,
-      filename: './var/pronto.log',
+      filename: './mazehall.log',
       handleExceptions: true,
       maxFiles: 3,
-      maxsize: 5242880
+      maxsize: 1048576
     }
   }
 };

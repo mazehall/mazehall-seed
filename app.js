@@ -1,16 +1,11 @@
 var mazehall = require('mazehall');
 var config = require('config');
-var expressValidator = require('express-validator');
 var logger = require('morgan');
-var winston = require('winston');
+var express = require('express');
 
-var key;
-winston.remove(winston.transports.Console);
-for (key in config.winston) {
-  winston.add(winston.transports[key], config.winston[key]);
-}
+var app = express()
+app.use(logger(config.logger.format, config.logger.options));
+mazehall.initExpress(app);
+mazehall.moduleStream.log();
 
-mazehall.app.use(expressValidator());
-mazehall.app.use(logger(config.logger.format, config.logger.options));
-
-module.exports = mazehall;
+module.exports = app;

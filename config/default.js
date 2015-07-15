@@ -4,13 +4,11 @@ module.exports = {
     options: {}
   },
   winston: {
-    File: {
-      level: 'silly',
-      json: false,
-      filename: './mazehall.log',
+    Console: {
+      level: 'info',
+      timestamp: true,
       handleExceptions: true,
-      maxFiles: 3,
-      maxsize: 1048576
+      colorize:true
     }
   }
 };
